@@ -22,6 +22,26 @@ namespace WorldTravel.Web.Pages.Admin.Customer
         public string PhoneNumber { get; set; }
         public GenderType? Gender { get; set; }
 
+        #region New Property
+        public string Sector { get; set; } // iþ unvaný
+        public string JobPosition { get; set; } // Pozisyon Adý
+        public string JobTitle { get; set; } // iþ unvaný
+        public string IsBecomeConsultDesc { get; set; } // Neden Danýþman Olmak Ýstiyorsunuz?
+        public string Profession { get; set; } // Uzmanlýk Alaný
+        public string IsNeedConsult { get; set; } // Ýhtiyaç Duyulan Danýþman Alaný
+        public string EducationStatus { get; set; } // Eðitim Durumu
+        public string CompanyName { get; set; } // Þirket Adý
+        public string CompanyContact { get; set; } // Þirket Ýletiþim Bilgileri
+        public string PositionName { get; set; } // Pozisyon Adý
+        public string SpecialRequest { get; set; } // Özel Ýstekler
+        public string JobTip { get; set; } // Ýþ Tanýmý
+        public string RequiredQualification { get; set; } // Aranan Nitelik
+        public string SalaryRange { get; set; } // Maaþ Aralýðý
+        public string HoursWork { get; set; } // Çalýþma Saatleri
+        public string Location { get; set; } // Lokasyon
+
+        #endregion
+
         private readonly IFormAppService _formAppService;
 
         public FormDetail(IFormAppService formAppService)
@@ -44,6 +64,26 @@ namespace WorldTravel.Web.Pages.Admin.Customer
                 PhoneNumber = form.Data.PhoneNumber;
                 Gender = form.Data.Gender;
                 FormIsOk = form.Data.FormIsOk;
+
+                Sector = form.Data.Sector;
+                JobPosition = form.Data.JobPosition;
+                JobTitle = form.Data.JobTitle;
+                IsBecomeConsultDesc = form.Data.IsBecomeConsultDesc;
+                Profession = form.Data.Profession;
+
+                IsNeedConsult = form.Data.IsNeedConsult;
+                EducationStatus = form.Data.EducationStatus;
+                CompanyName = form.Data.CompanyName;
+                CompanyContact = form.Data.CompanyContact;
+                PositionName = form.Data.PositionName;
+
+                SpecialRequest = form.Data.SpecialRequest;
+                JobTip = form.Data.JobTip;
+                RequiredQualification = form.Data.RequiredQualification;
+                SalaryRange = form.Data.SalaryRange;
+                HoursWork = form.Data.HoursWork;
+                Location = form.Data.Location;
+
             }
         }
     }

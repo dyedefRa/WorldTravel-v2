@@ -34,6 +34,18 @@
         background-color: red;
         transition: width 0.3s ease-in-out;
     }
+    .li-style{
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .list-item-style-cl{
+        border: 1px solid #d0d0d0;
+        width: 100%;
+        padding: 10px 15px;
+    }
 </style>
 
 <div class="row">
@@ -65,6 +77,151 @@
                         </div>
                         <hr />
                         <abp-card-title>@L["Başvuru Belgeleri"]</abp-card-title>
+                        <ul style="margin: 15px 0px; padding:0px;">
+                            <li class="li-style">
+                                <span class="list-item-style-cl">
+                                    Adınız Soyadınız
+                                </span>
+                                <span class="list-item-style-cl">@Model.FullName</span>
+                            </li>
+                            <li class="li-style">
+                                <span class="list-item-style-cl">
+                                    Email Adresi
+                                </span>
+                                <span class="list-item-style-cl">@Model.Email</span>
+                            </li>
+                              <li class="li-style">
+                              <span class="list-item-style-cl">
+                                    Cinsiyet</span>
+                                <span class="
+                                list-item-style-cl">@Model.Gender</span>
+                            </li>
+                            <li class="li-style">
+                                <span class="list-item-style-cl">
+                                    Telefon No
+                                </span>
+                                <span class="list-item-style-cl">@Model.PhoneNumber</span>
+                            </li>
+                               @if (Model.PositionName != "yok")
+                            {
+                                <li class="li-style">
+                                    <span class="list-item-style-cl">
+                                        Pozisyon Adı
+                                    </span>
+                                    <span class="list-item-style-cl">@Model.PositionName</span>
+                                </li>
+                            }
+                            @if (Model.JobPosition != "yok")
+                            {
+                                <li class="li-style">
+                                    <span class="list-item-style-cl">
+                                        Pozisyon
+                                    </span>
+                                    <span class="list-item-style-cl">@Model.JobPosition</span>
+                                </li>
+                            }
+                            @if (Model.JobTitle != "yok")
+                            {
+                                <li class="li-style">
+                                    <span class="list-item-style-cl">
+                                        İş</span>
+                                    <span class="list-item-style-cl">@Model.JobTitle</span>
+                                </li>
+                            }
+                            @if (Model.IsBecomeConsultDesc != "yok")
+                            {
+                                <li class="li-style">
+                                    <span class="list-item-style-cl">
+                                        Neden Danışman Olmaya İhtiyaç Duydunuz?
+                                    </span>
+                                    <span class="list-item-style-cl">@Model.IsBecomeConsultDesc</span>
+                                </li>
+                            }
+                            @if (Model.Profession != "yok")
+                            {
+                                <li class="li-style">
+                                    <span class="list-item-style-cl">
+                                        Uzmanlık Alanınız</span>
+                                    <span class="list-item-style-cl">@Model.Profession</span>
+                                </li>
+                            }
+                            @if (Model.IsNeedConsult != "yok")
+                            {
+                                <li class="li-style">
+                                    <span class="list-item-style-cl">
+                                        İhtiyaç Duyulan Danışman Alanı
+                                    </span>
+                                    <span class="list-item-style-cl">@Model.IsNeedConsult</span>
+                                </li>
+                            }
+                            @if (Model.CompanyName != "yok")
+                            {
+                                <li class="li-style">
+                                    <span class="list-item-style-cl">
+                                        Firma</span>
+                                    <span class="list-item-style-cl">@Model.CompanyName</span>
+                                </li>
+                            }
+                            @if (Model.CompanyContact != "yok")
+                            {
+                                <li class="li-style">
+                                    <span class="list-item-style-cl">
+                                        Firma iletişim</span>
+                                    <span class="list-item-style-cl">@Model.CompanyContact</span>
+                                </li>
+                            }
+                            @if (Model.SpecialRequest != "yok")
+                            {
+                                <li class="li-style">
+                                    <span class="list-item-style-cl">
+                                        Özel İstekleriniz
+                                    </span>
+                                    <span class="list-item-style-cl">@Model.SpecialRequest</span>
+                                </li>
+                            }
+                            @if (Model.JobTip != "yok")
+                            {
+                                <li class="li-style">
+                                    <span class="list-item-style-cl">
+                                        İş Tanımı</span>
+                                    <span class="list-item-style-cl">@Model.JobTip</span>
+                                </li>
+                            }
+                            @if (Model.RequiredQualification != "yok")
+                            {
+                                <li class="li-style">
+                                    <span class="list-item-style-cl">
+                                        Aranan Nitelikler</span>
+                                    <span class="list-item-style-cl">@Model.RequiredQualification</span>
+                                </li>
+                            }
+                            @if (Model.SalaryRange != "yok")
+                            {
+                                <li class="li-style">
+                                    <span class="list-item-style-cl">
+                                        Maaş Aralığı
+                                    </span>
+                                    <span class="list-item-style-cl">@Model.SalaryRange</span>
+                                </li>
+                            }
+                            @if (Model.HoursWork != "yok")
+                            {
+                                <li class="li-style">
+                                    <span class="list-item-style-cl">
+                                        Çalışma Saatleri</span>
+                                    <span class="list-item-style-cl">@Model.HoursWork</span>
+                                </li>
+                            }
+                            @if (Model.Location != "yok")
+                            {
+                                <li class="li-style">
+                                    <span class="list-item-style-cl">
+                                        Konum
+                                    </span>
+                                    <span class="list-item-style-cl">@Model.Location</span>
+                                </li>
+                            }
+                        </ul>
                     </abp-column>
                 </abp-row>
             </abp-card-header>
