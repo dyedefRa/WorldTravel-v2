@@ -73,11 +73,11 @@ namespace WorldTravel.Web.Pages.Account
                 {
                     double totalPercent = 0;
                     List<double> yuzdeler = new List<double>();
-                    foreach (var item in Forms)
+                    foreach (var item in Forms.Where(x=> x.FormRegType == "Vize Başvurusu"))
                     {
                         totalPercent = 0;
                         yuzdeler = new List<double>();
-                        foreach (var item2 in Forms)
+                        foreach (var item2 in Forms.Where(x=> x.FormRegType == "Vize Başvurusu"))
                         {
                             yuzdeler.Add(item2.FormIsOk);
                         }

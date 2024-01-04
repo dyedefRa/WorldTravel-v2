@@ -143,7 +143,7 @@ namespace WorldTravel.Web.Pages.Home
 
                         var form = new FormDto
                         {
-                            FormRegType = FormInputModel.SpecialRequest,
+                            FormRegType = "Vize Başvurusu",
                             SalaryRange = FormInputModel.SalaryRange,
                             BirthDate = DateTime.Now,
                             Sector = FormInputModel.Sector,

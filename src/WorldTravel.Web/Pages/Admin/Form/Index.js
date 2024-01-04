@@ -76,6 +76,13 @@ $(function () {
                         return l('Enum:GenderType:' + data);
                     }
                 },
+                {
+                    title: l('FormRegType'),
+                    data: "formRegType",
+                    render: function (data) {
+                        return data;
+                    }
+                },
                 //{
                 //    title: l('BirthDate'),
                 //    data: "birthDate",

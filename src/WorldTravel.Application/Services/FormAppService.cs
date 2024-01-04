@@ -60,6 +60,7 @@ namespace WorldTravel.Services
                 var viewModel = ObjectMapper.Map<Form, FormViewModel>(x);
                 viewModel.Name = x.Name + " " + x.Surname;
                 viewModel.CountryName = x.Country.Title;
+                viewModel.FormRegType = x.FormRegType;
                 viewModel.FormIsOk = x.FormIsOk;
                 return viewModel;
             }).ToList();

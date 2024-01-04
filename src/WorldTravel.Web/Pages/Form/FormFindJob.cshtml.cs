@@ -72,6 +72,7 @@ namespace WorldTravel.Web.Pages.Form
                 {
                     if(Form.FormRegType == "vizebasvurusu")
                     {
+                        Form.FormRegType = "Vize Baþvurusu";
                         Form.JobTip = "yok";
                         Form.JobPosition = "yok";
                         Form.PositionName = "yok";
@@ -92,6 +93,7 @@ namespace WorldTravel.Web.Pages.Form
                     }
                     else if(Form.FormRegType == "iscibul")
                     {
+                        Form.FormRegType = "Ýþçi Bul";
                         Form.Description = "";
                         Form.Gender = GenderType.DoNotWantSpecify;
                         Form.BirthDate = DateTime.Now;
@@ -109,6 +111,7 @@ namespace WorldTravel.Web.Pages.Form
                     }
                     else if (Form.FormRegType == "danismanbul")
                     {
+                        Form.FormRegType = "Danýþman Bul";
                         Form.Description = "yok";
                         Form.Gender = GenderType.DoNotWantSpecify;
                         Form.BirthDate = DateTime.Now;
@@ -132,6 +135,7 @@ namespace WorldTravel.Web.Pages.Form
                     }
                     else if (Form.FormRegType == "danismanol")
                     {
+                        Form.FormRegType = "Danýþman Ol";
                         Form.Description = "yok";
                         Form.Gender = GenderType.DoNotWantSpecify;
                         Form.BirthDate = DateTime.Now;
@@ -153,6 +157,7 @@ namespace WorldTravel.Web.Pages.Form
                     }
                     else if (Form.FormRegType == "isbul")
                     {
+                        Form.FormRegType = "Ýþ Bul";
                         Form.Description = "yok";
                         Form.Gender = GenderType.DoNotWantSpecify;
                         Form.BirthDate = DateTime.Now;
@@ -179,7 +184,7 @@ namespace WorldTravel.Web.Pages.Form
 
                     var form = new FormDto
                     {
-                        FormRegType = Form.SpecialRequest,
+                        FormRegType = Form.FormRegType,
                         SalaryRange= Form.SalaryRange,
                         BirthDate= DateTime.Now,
                         Sector= Form.Sector,
@@ -239,6 +244,7 @@ namespace WorldTravel.Web.Pages.Form
             public string Email { get; set; }
 
             [Required]
+            [Phone]
             public string PhoneNumber { get; set; }
 
             [Required]

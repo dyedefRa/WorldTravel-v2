@@ -84,7 +84,7 @@ namespace WorldTravel.Web.Pages.VisaType
 
                         var form = new FormDto
                         {
-                            FormRegType = Form.SpecialRequest,
+                            FormRegType = "Vize Başvurusu",
                             SalaryRange = Form.SalaryRange,
                             BirthDate = DateTime.Now,
                             Sector = Form.Sector,
@@ -149,7 +149,10 @@ namespace WorldTravel.Web.Pages.VisaType
             [Required]
             [EmailAddress]
             public string Email { get; set; }
+
+
             [Required]
+            [Phone]
             [StringLength(16, MinimumLength = 16, ErrorMessage = "Telefon alanı geçerli bir telefon numarası olmalıdır.")]
             public string PhoneNumber { get; set; }
             [Required]

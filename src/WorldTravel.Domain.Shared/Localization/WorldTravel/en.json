@@ -295,7 +295,9 @@
     "HoursWork": "Hours Work",
     "Location": "Location",
     "CustomerVisaApply": "Customer Visa Apply",
-    "Documents": "Document"
+    "Documents": "Document",
+    "FormRegType": "Form Type"
+
 
 
   }

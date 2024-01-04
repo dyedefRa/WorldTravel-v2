@@ -72,6 +72,13 @@
                         return data;
                     }
                 },
+                {
+                    title: l('FormRegType'),
+                    data: "formRegType",
+                    render: function (data) {
+                        return data;
+                    }
+                },
                 //{
                 //    title: l('Surname'),
                 //    data: "surname",

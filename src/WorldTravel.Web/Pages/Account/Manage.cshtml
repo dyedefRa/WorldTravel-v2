@@ -340,7 +340,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach (var item in Model.Forms)
+                                @foreach (var item in Model.Forms.Where(x=> x.FormRegType == "Vize Başvurusu"))
                                 {
                                     string desc = item.Description.Length > 100 ? $"{item.Description.Substring(0, 100)}..." : item.Description;
                                     <tr>
@@ -372,7 +372,56 @@
                             </tbody>
                         </table>
                         <br />
-
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4 style="font-family: Poppins-Medium !important; margin: 0 0px 15px 0; color: #676767; font-family: Poppins-Medium !important;">
+                                    Diğer Başvurularım
+                                </h4>
+                            </div>
+                        </div>
+                        <table class="table table-response" style="margin-bottom:0;">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Ülke</th>
+                                    <th>Açıklama</th>
+                                    <th class="d-none d-lg-block">Başvuru Tarihi</th>
+                                    <th class="d-none">Doğum Tarihi</th>
+                                    <th>Uygunluk</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Forms.Where(x => x.FormRegType != "Vize Başvurusu"))
+                                {
+                                    string desc = item.Description.Length > 100 ? $"{item.Description.Substring(0, 100)}..." : item.Description;
+                                    <tr>
+                                        <td>@item.Id</td>
+                                        <td>@item.Country.Title</td>
+                                        <td>@desc</td>
+                                        <td>@item.CreatedDate</td>
+                                        <td>@item.BirthDate</td>
+                                        <td>
+                                            @if (item.FormIsOk == 100)
+                                            {
+                                                <span class="text-success">Uygun</span>
+                                            }
+                                            else if (item.FormIsOk == 0)
+                                            {
+                                                <span class="text-warning">Uygun Değil</span>
+                                            }
+                                            else if (item.FormIsOk > 0 && item.FormIsOk < 100)
+                                            {
+                                                <span class="text-primary">İnceleniyor</span>
+                                            }
+                                            else
+                                            {
+                                                <span>Henüz Değerlendirilmedi</span>
+                                            }
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
                         @* <abp-table striped-rows="true" id="FormUserTable"></abp-table>*@
                     </abp-card-body>
                 </abp-card>

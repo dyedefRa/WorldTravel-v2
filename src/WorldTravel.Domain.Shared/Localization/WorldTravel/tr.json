@@ -293,6 +293,8 @@
     "HoursWork": "Çalışma Saatleri",
     "Location": "Lokasyon",
     "CustomerVisaApply": "Müşteri Vize Başvuruları",
-    "Documents": "Döküman"
+    "Documents": "Döküman",
+    "FormRegType": "Form Türü"
+
   }
 }
