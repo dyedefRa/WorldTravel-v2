@@ -68,10 +68,9 @@ namespace WorldTravel.Web.Pages.Account
                 UserManageInputModel = ObjectMapper.Map<AppUserViewModel, UserManageModel>(currentUser.Data);
                 Forms = await _formAppService.GetFormListAsyncUserId(CurrentUser.Id.Value);
                 Receipts = await _receiptAppService.GetReceiptByUserIdAsync(CurrentUser.Id.Value);
-                if (UserManageInputModel.ProfileIsOk != null)
+
+                if (Forms != null && Forms.Count > 0)
                 {
-                    Forms = await _formAppService.GetFormListAsyncUserId(currentUser.Data.Id);
-                    Receipts = await _receiptAppService.GetReceiptByUserIdAsync(currentUser.Data.Id);
                     double totalPercent = 0;
                     List<double> yuzdeler = new List<double>();
                     foreach (var item in Forms)

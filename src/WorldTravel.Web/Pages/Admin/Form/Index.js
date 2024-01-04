@@ -50,7 +50,7 @@ $(function () {
                 },
                 {
                     title: l('FullName'),
-                    data: "fullName",
+                    data: "name",
                     render: function (data) {
                         return data;
                     }

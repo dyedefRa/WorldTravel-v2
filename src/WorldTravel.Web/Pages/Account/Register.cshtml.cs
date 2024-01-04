@@ -60,7 +60,6 @@ namespace WorldTravel.Web.Pages.Account
                     input.ExtraProperties.Add("Gender", (int)UserRegisterInputModel.Gender);
                     input.ExtraProperties.Add("BirthDate", UserRegisterInputModel.BirthDate);
                     input.ExtraProperties.Add("ProfileIsOk", 0);
-                    input.ExtraProperties.Add("ProfileIsOk", UserRegisterInputModel.ProfileIsOk);
                     input.ExtraProperties.Add("Status", (int)Status.Active);
                     input.UserName = StringExtensions.GenerateUserName(UserRegisterInputModel.Email);
                     input.RoleNames = new string[] { EnumExtensions.GetEnumDescription(UserType.User) };
