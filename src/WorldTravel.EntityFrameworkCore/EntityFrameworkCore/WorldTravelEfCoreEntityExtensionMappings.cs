@@ -96,6 +96,7 @@ namespace WorldTravel.EntityFrameworkCore
                                 propertyBuilder.HasColumnName("ImageId");
                             }
                         );
+              
             });
         }
     }

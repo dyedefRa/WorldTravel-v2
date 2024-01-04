@@ -26,6 +26,7 @@ using static WorldTravel.Web.Pages.Admin.Slider.EditModel;
 using static WorldTravel.Web.Pages.Admin.VisaType.CreateModel;
 using static WorldTravel.Web.Pages.Admin.VisaType.EditModel;
 using static WorldTravel.Web.Pages.Country.DetailModel;
+using static WorldTravel.Web.Pages.Admin.CountryContent.CreateModel;
 
 namespace WorldTravel.Web
 {
@@ -60,6 +61,7 @@ namespace WorldTravel.Web
             CreateMap<Country, CountryDto>().ReverseMap();
             CreateMap<CountryContentDto, EditCountryContentModel>().ReverseMap();
             CreateMap<CountryContentDto, CreateUpdateCountryContentDto>().ReverseMap();
+            CreateMap<Pages.Admin.CountryContent.CreateModel.CreateCountryContentModel, CreateUpdateCountryContentDto>().ReverseMap();
             #endregion
 
             #region VisaType

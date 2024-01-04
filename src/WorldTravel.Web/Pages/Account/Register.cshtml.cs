@@ -59,10 +59,15 @@ namespace WorldTravel.Web.Pages.Account
                     input.ExtraProperties.Add("UserType", (int)UserType.User);
                     input.ExtraProperties.Add("Gender", (int)UserRegisterInputModel.Gender);
                     input.ExtraProperties.Add("BirthDate", UserRegisterInputModel.BirthDate);
+<<<<<<< HEAD
                     input.ExtraProperties.Add("ProfileIsOk", 0);
+=======
+                    input.ExtraProperties.Add("ProfileIsOk", UserRegisterInputModel.ProfileIsOk);
+>>>>>>> Third Commit
                     input.ExtraProperties.Add("Status", (int)Status.Active);
                     input.UserName = StringExtensions.GenerateUserName(UserRegisterInputModel.Email);
                     input.RoleNames = new string[] { EnumExtensions.GetEnumDescription(UserType.User) };
+                    
                     var addedResult = await _identityUserAppService.CreateAsync(input);
 
                     //(await UserManager.CreateAsync(user)).CheckErrors(LocalizationManager);
@@ -144,6 +149,7 @@ namespace WorldTravel.Web.Pages.Account
             [Required]
             [SelectItems(nameof(Gender))]
             public GenderType Gender { get; set; }
+            public int ProfileIsOk { get; set; }
             //[Required]
             public DateTime? BirthDate { get; set; }
         }

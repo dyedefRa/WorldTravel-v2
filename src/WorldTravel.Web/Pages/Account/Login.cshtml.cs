@@ -42,6 +42,7 @@ namespace WorldTravel.Web.Pages.Account
                     var userResult = await UserManager.FindByEmailAsync(UserLoginInputModel.Email);
                     if (userResult == null)
                     {
+                        
                         await SignInManager.SignOutAsync();
                         Alerts.Danger("Kullanıcı bulunamadı. Lütfen bilgilerinizi kontrol ediniz.");
                         return Page();
