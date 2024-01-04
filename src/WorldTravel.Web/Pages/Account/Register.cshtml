@@ -13,68 +13,67 @@
     }
 </style>
 
-<<<<<<< HEAD
 <div class="container" style="margin-top:150px; margin-bottom:170px;">
     <div class="row">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 main-col">
-=======
-<div class="container" style="margin-top:30px;">
-    <div class="row">
-        <div class="col-12 col-sm-12 col-md-6 col-lg-6 main-col offset-md-3">
->>>>>>> Third Commit
-            <div class="mb-4 cont-content" style="box-shadow: -1px 0px 20px 0 #ededed;">
-                <form method="post" class="golden-from" href="/Account/Register">
-                    @Html.AntiForgeryToken()
-                    @(await Component.InvokeAsync<Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic.Themes.Basic.Components.PageAlerts.PageAlertsViewComponent>())
-                    <div class="row">   
-                        <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                            <abp-input asp-for="UserRegisterInputModel.Name" class="golden-from-element" label="@L["Name"]" />
-                        </div>
-                        <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                            <abp-input asp-for="UserRegisterInputModel.Surname" class="golden-from-element" label="@L["Surname"]" />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                            <abp-input asp-for="UserRegisterInputModel.Email" class="golden-from-element" label="@L["Email"]" />
-                        </div>
-                        <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                            <abp-input asp-for="UserRegisterInputModel.PhoneNumber" class="mobilephone" placeholder="0(5__) ___-____" label="@L["PhoneNumber"]" />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                            <abp-input asp-for="UserRegisterInputModel.Password" class="golden-from-element" label="@L["Password"]" />
-                        </div>
-                        <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                            <abp-input asp-for="UserRegisterInputModel.ConfirmPassword" class="golden-from-element" label="@L["ConfirmPassword"]" />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                            <abp-select asp-for="UserRegisterInputModel.Gender" class="golden-from-element" label="@L["Gender"]">
-                                <option disabled selected>@L["Choose"]</option>
-                            </abp-select>
-                        </div>
-                        <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                            <abp-input asp-for="UserRegisterInputModel.BirthDate" class="golden-from-element" label="@L["BirthDate"]" />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="text-center col-12 col-sm-12 col-md-12 col-lg-12">
-                            <abp-button text="@L["Register"]" style="background: #ff7800; padding: 15px 20px;
+            <div class="container" style="margin-top:30px;">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 main-col offset-md-3">
+                        <div class="mb-4 cont-content" style="box-shadow: -1px 0px 20px 0 #ededed;">
+                            <form method="post" class="golden-from" href="/Account/Register">
+                                @Html.AntiForgeryToken()
+                                @(await Component.InvokeAsync<Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic.Themes.Basic.Components.PageAlerts.PageAlertsViewComponent>())
+                                <div class="row">
+                                    <div class="form-group col-md-6 col-lg-6 col-xl-6">
+                                        <abp-input asp-for="UserRegisterInputModel.Name" class="golden-from-element" label="@L["Name"]" />
+                                    </div>
+                                    <div class="form-group col-md-6 col-lg-6 col-xl-6">
+                                        <abp-input asp-for="UserRegisterInputModel.Surname" class="golden-from-element" label="@L["Surname"]" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-6 col-lg-6 col-xl-6">
+                                        <abp-input asp-for="UserRegisterInputModel.Email" class="golden-from-element" label="@L["Email"]" />
+                                    </div>
+                                    <div class="form-group col-md-6 col-lg-6 col-xl-6">
+                                        <abp-input asp-for="UserRegisterInputModel.PhoneNumber" class="mobilephone" placeholder="0(5__) ___-____" label="@L["PhoneNumber"]" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-6 col-lg-6 col-xl-6">
+                                        <abp-input asp-for="UserRegisterInputModel.Password" class="golden-from-element" label="@L["Password"]" />
+                                    </div>
+                                    <div class="form-group col-md-6 col-lg-6 col-xl-6">
+                                        <abp-input asp-for="UserRegisterInputModel.ConfirmPassword" class="golden-from-element" label="@L["ConfirmPassword"]" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-6 col-lg-6 col-xl-6">
+                                        <abp-select asp-for="UserRegisterInputModel.Gender" class="golden-from-element" label="@L["Gender"]">
+                                            <option disabled selected>@L["Choose"]</option>
+                                        </abp-select>
+                                    </div>
+                                    <div class="form-group col-md-6 col-lg-6 col-xl-6">
+                                        <abp-input asp-for="UserRegisterInputModel.BirthDate" class="golden-from-element" label="@L["BirthDate"]" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="text-center col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <abp-button text="@L["Register"]" style="background: #ff7800; padding: 15px 20px;
                                         border-radius: 5px; font-weight: 700; box-shadow: 0px 1px 20px 0 #1594d069;" type="submit" button-type="Primary" />
-                            <p style="margin-top:20px;">
-                                <a href="/Account/Login">@L["LoginInstead"]</a>
-                            </p>
+                                        <p style="margin-top:20px;">
+                                            <a href="/Account/Login">@L["LoginInstead"]</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
 @section scripts {
     <script>
         $(document).ready(function () {
