@@ -256,11 +256,23 @@ namespace WorldTravel.Web.Pages.Form
             public int CountryId { get; set; }
 
             #region New Property
+
+            [Required]
             public string Sector { get; set; } // Sektör
+
+            [Required]
             public string JobTitle { get; set; } // iþ unvaný
+
+            [Required]
             public string IsBecomeConsultDesc { get; set; } // Neden Danýþman Olmak Ýstiyorsunuz?
+
+            [Required]
             public string Profession { get; set; } // Uzmanlýk Alaný
+
+            [Required]
             public string IsNeedConsult { get; set; } // Ýhtiyaç Duyulan Danýþman Alaný
+
+            [Required]
             public string EducationStatus { get; set; } // Eðitim Durumu
             public string CompanyName { get; set; } // Þirket Adý
             public string CompanyContact { get; set; } // Þirket Ýletiþim Bilgileri

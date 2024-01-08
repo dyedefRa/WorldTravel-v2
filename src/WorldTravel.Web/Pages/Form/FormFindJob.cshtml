@@ -64,18 +64,18 @@
                     @(await Component.InvokeAsync<Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic.Themes.Basic.Components.PageAlerts.PageAlertsViewComponent>())
                     <div class="row">
                         <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                            <abp-input asp-for="Form.Name" class="golden-from-element" label="@L["Name"]" />
+                            <abp-input asp-for="Form.Name" class="golden-from-element" required label="@L["Name"]" />
                         </div>
                         <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                            <abp-input asp-for="Form.Surname" class="golden-from-element" label="@L["Surname"]" />
+                            <abp-input asp-for="Form.Surname" class="golden-from-element" required label="@L["Surname"]" />
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                            <abp-input asp-for="Form.Email" class="golden-from-element" label="@L["Email"]" />
+                            <abp-input asp-for="Form.Email" class="golden-from-element" required label="@L["Email"]" />
                         </div>
                         <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                            <abp-input asp-for="Form.PhoneNumber" class="golden-from-element" placeholder="0(5__) ___-____" label="@L["PhoneNumber"]" />
+                            <abp-input asp-for="Form.PhoneNumber" class="golden-from-element" required placeholder="0(5__) ___-____" label="@L["PhoneNumber"]" />
                         </div>
                     </div>
 
@@ -84,10 +84,10 @@
                         <input type="hidden" name="Form.FormRegType" value="danismanol">
                         <div class="row">
                             <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                <abp-input asp-for="Form.JobTitle" class="golden-from-element" label="@L["JobTitle"]" />
+                                <abp-input asp-for="Form.JobTitle" class="golden-from-element" required label="@L["JobTitle"]" />
                             </div>
                             <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                <abp-input asp-for="Form.Sector" class="golden-from-element" label="@L["Sector"]" />
+                                <abp-input asp-for="Form.Sector" class="golden-from-element" required label="@L["Sector"]" />
                             </div>
                         </div>
                     }
@@ -98,12 +98,12 @@
 
                         <div class="row">
                             <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                <abp-input asp-for="Form.IsNeedConsult" class="golden-from-element" label="@L["IsNeedConsult"]" />
+                                <abp-input asp-for="Form.IsNeedConsult" class="golden-from-element" required label="@L["IsNeedConsult"]" />
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-12 col-lg-12col-xl-12">
-                                <abp-input asp-for="Form.RequiredQualification" class="golden-from-element" label="@L["RequiredQualification"]" />
+                                <abp-input asp-for="Form.RequiredQualification" class="golden-from-element" required label="@L["RequiredQualification"]" />
                             </div>
                         </div>
                     }
@@ -114,15 +114,15 @@
 
                         <div class="row">
                             <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                <abp-input asp-for="Form.EducationStatus" class="golden-from-element" label="@L["EducationStatus"]" />
+                                <abp-input asp-for="Form.EducationStatus" class="golden-from-element" required label="@L["EducationStatus"]" />
                             </div>
                             <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                <abp-input asp-for="Form.JobPosition" class="golden-from-element" label="@L["JobPosition"]" />
+                                <abp-input asp-for="Form.JobPosition" class="golden-from-element" required label="@L["JobPosition"]" />
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-12 col-lg-12 col-xl-12">
-                                <abp-select asp-for="Form.CountryId" class="golden-from-element" label="@L["Country"]">
+                                <abp-select asp-for="Form.CountryId" class="golden-from-element" required label="@L["Country"]">
                                     <option disabled selected>@L["Choose"]</option>
                                 </abp-select>
                             </div>
@@ -135,34 +135,34 @@
 
                         <div class="row">
                             <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                <abp-input asp-for="Form.CompanyName" class="golden-from-element" label="@L["CompanyName"]" />
+                                <abp-input asp-for="Form.CompanyName" class="golden-from-element" required label="@L["CompanyName"]" />
                             </div>
                             <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                <abp-input asp-for="Form.CompanyContact" class="golden-from-element" label="@L["CompanyContact"]" />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                <abp-input asp-for="Form.PositionName" class="golden-from-element" label="@L["PositionName"]" />
-                            </div>
-                            <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                <abp-input asp-for="Form.JobTip" class="golden-from-element" label="@L["JobTip"]" />
+                                <abp-input asp-for="Form.CompanyContact" class="golden-from-element" required label="@L["CompanyContact"]" />
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                <abp-input asp-for="Form.RequiredQualification" class="golden-from-element" label="@L["RequiredQualification"]" />
+                                <abp-input asp-for="Form.PositionName" class="golden-from-element" required label="@L["PositionName"]" />
                             </div>
                             <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                <abp-input asp-for="Form.SalaryRange" class="golden-from-element" label="@L["SalaryRange"]" />
+                                <abp-input asp-for="Form.JobTip" class="golden-from-element" required label="@L["JobTip"]" />
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                <abp-input asp-for="Form.HoursWork" class="golden-from-element" label="@L["HoursWork"]" />
+                                <abp-input asp-for="Form.RequiredQualification" class="golden-from-element" required label="@L["RequiredQualification"]" />
                             </div>
                             <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                <abp-input asp-for="Form.Location" class="golden-from-element" label="@L["Location"]" />
+                                <abp-input asp-for="Form.SalaryRange" class="golden-from-element" required label="@L["SalaryRange"]" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6 col-lg-6 col-xl-6">
+                                <abp-input asp-for="Form.HoursWork" class="golden-from-element" required label="@L["HoursWork"]" />
+                            </div>
+                            <div class="form-group col-md-6 col-lg-6 col-xl-6">
+                                <abp-input asp-for="Form.Location" class="golden-from-element" required label="@L["Location"]" />
                             </div>
                         </div>
                     }
@@ -172,18 +172,18 @@
                         <input type="hidden" name="Form.FormRegType" value="vizebasvurusu">
                         <div class="row">
                             <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                <abp-select asp-for="Form.Gender" class="golden-from-element" label="@L["Gender"]">
+                                <abp-select asp-for="Form.Gender" class="golden-from-element" required label="@L["Gender"]">
                                     <option disabled selected>@L["Choose"]</option>
                                 </abp-select>
                             </div>
                             <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                <abp-input asp-for="Form.BirthDate" class="golden-from-element" label="@L["BirthDate"]" />
+                                <abp-input asp-for="Form.BirthDate" class="golden-from-element" required label="@L["BirthDate"]" />
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="form-group col-md-12 col-lg-12 col-xl-12">
-                                <abp-input asp-for="Form.Description" class="golden-from-element" label="@L["Description"]" />
+                                <abp-input asp-for="Form.Description" class="golden-from-element" required label="@L["Description"]" />
                             </div>
                         </div>
                     }

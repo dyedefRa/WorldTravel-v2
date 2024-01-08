@@ -237,40 +237,40 @@
                     @(await Component.InvokeAsync<Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic.Themes.Basic.Components.PageAlerts.PageAlertsViewComponent>())
                     <div class="row">
                         <div class="form-group col-md-6 col-lg-6 col-xl-6 mbn">
-                            <abp-input asp-for="Form.Name" class="golden-form-element" label="@L["Name"]" />
+                            <abp-input required asp-for="Form.Name" class="golden-form-element" label="@L["Name"]" />
                         </div>
                         <div class="form-group col-md-6 col-lg-6 col-xl-6 mbn">
-                            <abp-input asp-for="Form.Surname" class="golden-form-element" label="@L["Surname"]" />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-6 col-lg-6 col-xl-6 mbn">
-                            <abp-input asp-for="Form.Email" class="golden-form-element" label="@L["Email"]" />
-                        </div>
-                        <div class="form-group col-md-6 col-lg-6 col-xl-6 mbn">
-                            <abp-input asp-for="Form.PhoneNumber" class="mobilephone" placeholder="0(5__) ___-____" label="@L["PhoneNumber"]" />
+                            <abp-input required asp-for="Form.Surname" class="golden-form-element" label="@L["Surname"]" />
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-md-6 col-lg-6 col-xl-6 mbn">
-                            <abp-select asp-for="Form.Gender" class="golden-form-element" label="@L["Gender"]">
+                            <abp-input required asp-for="Form.Email" class="golden-form-element" label="@L["Email"]" />
+                        </div>
+                        <div class="form-group col-md-6 col-lg-6 col-xl-6 mbn">
+                            <abp-input required asp-for="Form.PhoneNumber" class="mobilephone" placeholder="0(5__) ___-____" label="@L["PhoneNumber"]" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6 col-lg-6 col-xl-6 mbn">
+                            <abp-select required asp-for="Form.Gender" class="golden-form-element" label="@L["Gender"]">
                                 <option disabled selected>@L["Choose"]</option>
                             </abp-select>
                         </div>
                         <div class="form-group col-md-6 col-lg-6 col-xl-6 mbn">
-                            <abp-input asp-for="Form.BirthDate" class="golden-form-element" label="@L["BirthDate"]" />
+                            <abp-input required asp-for="Form.BirthDate" class="golden-form-element" label="@L["BirthDate"]" />
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-md-12 col-lg-12 col-xl-12 mbn">
-                            <abp-select asp-for="Form.CountryId" class="golden-form-element" label="@L["Country"]">
+                            <abp-select required asp-for="Form.CountryId" class="golden-form-element" label="@L["Country"]">
                                 <option disabled selected>@L["Choose"]</option>
                             </abp-select>
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-md-12 col-lg-12 col-xl-12 mbn">
-                            <abp-input asp-for="Form.Description" class="golden-form-element" label="@L["Description"]" style="resize: none;" />
+                            <abp-input required asp-for="Form.Description" class="golden-form-element" label="@L["Description"]" style="resize: none;" />
                         </div>
                     </div>
                     <div class="row" style="margin-bottom:10px;margin-top:10px;">
