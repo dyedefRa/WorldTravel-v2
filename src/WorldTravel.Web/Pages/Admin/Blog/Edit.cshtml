@@ -10,7 +10,7 @@
     <abp-modal size="Large">
         <abp-modal-header title="@L["NewBlog"].Value"></abp-modal-header>
         <abp-modal-body>
-            <abp-input asp-for="Id" />
+            <abp-input asp-for="Id" type="hidden" />
             <abp-input asp-for="BlogInfo.MainImage" label="@L["Image"]" accept="image/png, image/gif, image/jpeg" />
             <abp-input asp-for="BlogInfo.Title" label="@L["Title"]" />
             <abp-input asp-for="BlogInfo.SeoTitle" label="@L["SeoTitle"]" />

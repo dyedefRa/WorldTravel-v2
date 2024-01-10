@@ -10,7 +10,7 @@
     <abp-modal size="Large">
         <abp-modal-header title="@L["NewVisaType"].Value"></abp-modal-header>
         <abp-modal-body>
-            <abp-input asp-for="Id" />
+            <abp-input asp-for="Id" type="hidden" />
             <abp-input asp-for="VisaInfo.Title" label="@L["Title"]" />
 
             <abp-input asp-for="VisaInfo.MainImage" label="@L["Image"]" accept="image/png, image/gif, image/jpeg" />
@@ -19,7 +19,7 @@
             </abp-select>
             <abp-input asp-for="VisaInfo.Description" label="@L["Description"]" class="ckeditor"/>
             <abp-input asp-for="VisaInfo.Rank" label="@L["Rank"]" />
-            <abp-input asp-for="VisaInfo.ShortDescription" label="@L["ShortDescription"]" />
+            <abp-input asp-for="VisaInfo.ShortDescription" label="@L["ShortDescription"]" class="ckeditor" />
             <abp-input asp-for="VisaInfo.ExtraDescription" label="@L["ExtraDescription"]" class="ckeditor" />
             <abp-input asp-for="VisaInfo.IsSeenHomePage" label="@L["IsSeenHomePage"]" />
             <hr />

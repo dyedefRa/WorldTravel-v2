@@ -266,10 +266,10 @@
     <div class="main-body">
 
         <div class="w3-bar w3-black" style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
-            <button class="w3-bar-item w3-button active" style="width:100%" onclick="openCity('profile-status-p')"><i class="fa fa-user"></i> Profil</button>
-            <button class="w3-bar-item w3-button" style="width:100%" onclick="openCity('profile-edit-p')"><i class="fa fa-edit"></i> Profil Düzenle</button>
+            <button class="w3-bar-item w3-button active" style="width:100%" onclick="openCity('profile-status-p')"><i class="fa fa-user"></i> @L["Profile"]</button>
+            <button class="w3-bar-item w3-button" style="width:100%" onclick="openCity('profile-edit-p')"><i class="fa fa-edit"></i> @L["EditProfile"]</button>
             @*            <button class="w3-bar-item w3-button" onclick="openCity('status-p')">Vize Uygunluk</button>
-            *@            <button class="w3-bar-item w3-button" style="width:100%" onclick="openCity('document-upld-p')"><i class="fa fa-upload"></i> Belgeler</button>
+            *@            <button class="w3-bar-item w3-button" style="width:100%" onclick="openCity('document-upld-p')"><i class="fa fa-upload"></i> @L["Documents"]</button>
         </div>
 
         <div id="profile-status-p" class="city">
@@ -299,7 +299,7 @@
                                         <span class="progress-value">%0</span>
                                     </div>
                                     <h4 style="margin: 15px 0 0 0; color: #676767;">
-                                        Uygunluk
+                                        @L["Acceptability"]
                                     </h4>
                                 </div>
                             </div>
@@ -309,14 +309,14 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <h4 style="font-family: Poppins-Medium !important; margin: 0 0px 15px 0; color: #676767; font-family: Poppins-Medium !important;">
-                                    Belgelerinizi Yükleyin
+                                    @L["UploadDocument"]
                                 </h4>
                             </div>
                         </div>
                         <form method="post" style="display: flex;" href="Account/Manage">
                             <input type="file" id="fileup" hidden accept="image/*" />
                             <button type="button" id="btnInsertReceiptImage" class="btn btn-success btn-block" style="margin-top:10px;">
-                                Belgenizi seçin ve yükleyin
+                                @L["ChooseAndUpload"]
                             </button>
                         </form>
                         <br />
@@ -324,7 +324,7 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <h4 style="font-family: Poppins-Medium !important; margin: 0 0px 15px 0; color: #676767; font-family: Poppins-Medium !important;">
-                                    Vize Başvurularım
+                                    @L["VisaApplication"]
                                 </h4>
                             </div>
                         </div>
@@ -332,11 +332,11 @@
                             <thead>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Ülke</th>
-                                    <th>Açıklama</th>
-                                    <th class="d-none d-lg-block">Başvuru Tarihi</th>
-                                    <th class="d-none">Doğum Tarihi</th>
-                                    <th>Uygunluk</th>
+                                    <th>@L["Countries"]</th>
+                                    <th>@L["Description"]</th>
+                                    <th class="d-none d-lg-block">@L["ApplyDate"]</th>
+                                    <th class="d-none">@L["BirthDate"]</th>
+                                    <th>@L["Setting"]</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -352,19 +352,19 @@
                                         <td>
                                             @if (item.FormIsOk == 100)
                                             {
-                                                <span class="text-success">Uygun</span>
+                                                <span class="text-success">@L["Approved"]</span>
                                             }
                                             else if (item.FormIsOk == 0)
                                             {
-                                                <span class="text-warning">Uygun Değil</span>
+                                                <span class="text-warning">@L["Rejected"]</span>
                                             }
                                             else if (item.FormIsOk > 0 && item.FormIsOk < 100)
                                             {
-                                                <span class="text-primary">İnceleniyor</span>
+                                                <span class="text-primary">@L["ReviewNow"]</span>
                                             }
                                             else
                                             {
-                                                <span>Henüz Değerlendirilmedi</span>
+                                                <span>@L["NotYetRated"]</span>
                                             }
                                         </td>
                                     </tr>
@@ -375,7 +375,7 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <h4 style="font-family: Poppins-Medium !important; margin: 0 0px 15px 0; color: #676767; font-family: Poppins-Medium !important;">
-                                    Diğer Başvurularım
+                                    @L["MyOtherApplications"]
                                 </h4>
                             </div>
                         </div>
@@ -383,11 +383,11 @@
                             <thead>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Ülke</th>
-                                    <th>Açıklama</th>
-                                    <th class="d-none d-lg-block">Başvuru Tarihi</th>
-                                    <th class="d-none">Doğum Tarihi</th>
-                                    <th>Uygunluk</th>
+                                    <th>@L["Countries"]</th>
+                                    <th>@L["Description"]</th>
+                                    <th class="d-none d-lg-block">@L["ApplyDate"]</th>
+                                    <th class="d-none">@L["BirthDate"]</th>
+                                    <th>@L["Setting"]</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -403,19 +403,19 @@
                                         <td>
                                             @if (item.FormIsOk == 100)
                                             {
-                                                <span class="text-success">Uygun</span>
+                                                <span class="text-success">@L["Approved"]</span>
                                             }
                                             else if (item.FormIsOk == 0)
                                             {
-                                                <span class="text-warning">Uygun Değil</span>
+                                                <span class="text-warning">@L["Rejected"]</span>
                                             }
                                             else if (item.FormIsOk > 0 && item.FormIsOk < 100)
                                             {
-                                                <span class="text-primary">İnceleniyor</span>
+                                                <span class="text-primary">@L["ReviewNow"]</span>
                                             }
                                             else
                                             {
-                                                <span>Henüz Değerlendirilmedi</span>
+                                                <span>@L["NotYetRated"]</span>
                                             }
                                         </td>
                                     </tr>
@@ -449,7 +449,7 @@
                                                 <p class="text-secondary mb-1">@Model.UserManageInputModel.BirthDate.Value.ToZodiacSign()</p>
                                             }
                                             <p></p>
-                                            <p class="text-muted font-size-sm">@Model.UserManageInputModel.CreationTime.ToTurkishDateString()'den beri üyesiniz</p>
+                                            <p class="text-muted font-size-sm">@Model.UserManageInputModel.CreationTime.ToTurkishDateString() @L["MemberSinceJoin"]</p>
                                             @*   <button type="button" id="btnChangePassword" class="btn btn-blue">
                                             @L["Şifre Değiş"]
                                             </button>*@
@@ -530,16 +530,16 @@
                     <abp-card-body>
                         <div class="row">
                             <div class="col-sm-12">
-                                <h4 style="margin: 0 0px 15px 0; color: #676767; font-family: Poppins-Medium !important;">Yüklenen Belgeler</h4>
+                                <h4 style="margin: 0 0px 15px 0; color: #676767; font-family: Poppins-Medium !important;">@L["UploadedDocuments"]</h4>
                             </div>
                         </div>
                         <table class="table table-response">
                             <thead>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Belge Adı</th>
-                                    <th>Yüklenme</th>
-                                    <th>İşlem</th>
+                                    <th>@L["DocumentName"]</th>
+                                    <th>@L["UploadedTime"]</th>
+                                    <th>@L["Setting"]</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -549,7 +549,7 @@
                                         <td>@item2.FileId</td>
                                         <td>@item2.File.Name</td>
                                         <td>@item2.File.CreatedDate.ToString()</td>
-                                        <td><a class="btn btn-success btn-block" target="_blank" href="@item2.File.Path">Görüntüle</a></td>
+                                        <td><a class="btn btn-success btn-block" target="_blank" href="@item2.File.Path">@L["Show"]</a></td>
                                     </tr>
                                 }
                             </tbody>

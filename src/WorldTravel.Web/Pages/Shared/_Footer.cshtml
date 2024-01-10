@@ -1,5 +1,6 @@
 ﻿@using WorldTravel.Abstract
-
+@using WorldTravel.Extensions
+@inject Microsoft.Extensions.Localization.IStringLocalizer<WorldTravel.Localization.WorldTravelResource> L
 @inject ICountryContentAppService _countryContentAppService
 @inject IVisaTypeAppService _visaTypeAppService
 @inject IJobAppService _jobAppService
@@ -48,16 +49,16 @@
                         </ul>
                     </div>
                     <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
-                        <h4 class="h4">Hızlı Menü</h4>
+                        <h4 class="h4">@L["QuickMenu"]</h4>
                         <ul>
-                            <li><a href="/Country">Ülkeler</a></li>
-                            <li><a href="/VisaType">Vize Türleri</a></li>
-                            <li><a href="/Blog">Güncel</a></li>
-                            <li><a href="/Job">İş & Yaşam Fırsatları</a></li>
+                            <li><a href="/Country">@L["Countries"]</a></li>
+                            <li><a href="/VisaType">@L["VisaTypes"]</a></li>
+                            <li><a href="/Blog">@L["Latest"]</a></li>
+                            <li><a href="/Job">@L["JobAndLifeTitle"]</a></li>
                         </ul>
                     </div>
                     <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
-                        <h4 class="h4">İş & Yaşam Fırsatları</h4>
+                        <h4 class="h4">@L["JobAndLifeTitle"]</h4>
                         <ul>
                             @foreach (var item in jobs.Take(5).OrderByDescending(x=> x.Id))
                             {
@@ -66,7 +67,7 @@
                         </ul>
                     </div>
                     <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
-                        <h4 class="h4">Vize Türleri</h4>
+                        <h4 class="h4">@L["VisaTypes"]</h4>
                         <ul>
                             @foreach (var item in visaTypes.Take(5))
                             {
@@ -85,7 +86,7 @@
                          class="col-12 col-sm-12 col-md-6 col-lg-6 order-1 order-md-0 order-lg-0 order-sm-1 copyright text-sm-center text-md-left text-lg-left">
                         <span>
 
-                        </span> Tüm Hakları Saklıdır © 2023
+                        </span> @L["AllRightReserved"]
                     </div>
                     <!--End Footer Copyright-->
                     <!--Footer Payment Icon-->

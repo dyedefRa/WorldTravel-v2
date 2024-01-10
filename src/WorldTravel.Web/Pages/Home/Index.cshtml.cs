@@ -153,7 +153,7 @@ namespace WorldTravel.Web.Pages.Home
                             RequiredQualification = FormInputModel.RequiredQualification,
                             CountryId = FormInputModel.CountryId,
                             CreatedDate = DateTime.Now,
-                            Description = FormInputModel.Description,
+                            Description = FormInputModel.Description != null || FormInputModel.Description != "" ? FormInputModel.Description : "yok",
                             EducationStatus = FormInputModel.EducationStatus,
                             Email = FormInputModel.Email,
                             FormIsOk = 0,

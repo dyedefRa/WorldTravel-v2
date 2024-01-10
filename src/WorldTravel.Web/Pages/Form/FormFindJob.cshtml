@@ -183,7 +183,7 @@
 
                         <div class="row">
                             <div class="form-group col-md-12 col-lg-12 col-xl-12">
-                                <abp-input asp-for="Form.Description" class="golden-from-element" required label="@L["Description"]" />
+                                <abp-input asp-for="Form.Description" class="golden-from-element" label="@L["Description"]" />
                             </div>
                         </div>
                     }
@@ -193,7 +193,7 @@
                         <div class="flex" style="flex-direction: row; align-items: center;">
                             <input id="sozlesmeonay" type="checkbox" name="IsRead" required>
                             <span class="kvkk" style="position: relative; left: 10px; font-size: 18px;">
-                                <a style="text-decoration:underline" class="kvkkopenModal" href="#">KVKK</a> kapsamındaki metni okudum, onaylıyorum.
+                                <a style="text-decoration:underline" class="kvkkopenModal" href="#">@L["kvkk"]</a>
                             </span>
                         </div>
                         <abp-button text="@L["ApplyNow"]" type="submit" class="btn-nice btn-form " button-type="Primary" />

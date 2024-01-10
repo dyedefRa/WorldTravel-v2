@@ -242,6 +242,10 @@
         background: #ff7800 !important;
         border: 0 !important;
     }
+
+    .form-apply-group {
+        flex-direction: column !important;
+    }
 }
 
 @media (max-width: 576px) {
@@ -274,6 +278,10 @@
 
     .data-cont-p-mobile {
         text-align: center !important;
+    }
+
+    .form-apply-group {
+        flex-direction: column !important;
     }
 }
 
@@ -309,6 +317,7 @@
     .reference-text {
         width: auto;
     }
+
 }
 
 @media (min-width: 768px) {

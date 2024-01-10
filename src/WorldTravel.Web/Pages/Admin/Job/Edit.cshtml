@@ -10,7 +10,7 @@
     <abp-modal size="Large">
         <abp-modal-header title="@L["NewJob"].Value"></abp-modal-header>
         <abp-modal-body>
-            <abp-input asp-for="Id" />
+            <abp-input type="hidden" asp-for="Id" />
             <abp-input asp-for="JobInfo.Title" label="@L["Title"]" />
 
             <abp-input asp-for="JobInfo.MainImage" label="@L["Image"]" accept="image/png, image/gif, image/jpeg" />
@@ -20,7 +20,7 @@
             <abp-input asp-for="JobInfo.AccommodationFee" label="@L["AccommodationFee"]" />
             <abp-input asp-for="JobInfo.HourlyRate" label="@L["HourlyRate"]" />
             <abp-input asp-for="JobInfo.LanguageName" label="@L["LanguageName"]" />
-            <abp-input asp-for="JobInfo.ShortDescription" label="@L["ShortDescription"]" />
+            <abp-input asp-for="JobInfo.ShortDescription" label="@L["ShortDescription"]" class="ckeditor" />
             <abp-input asp-for="JobInfo.Description" label="@L["Description"]" class="ckeditor" />
             <abp-input asp-for="JobInfo.ExtraDescription" label="@L["ExtraDescription"]" class="ckeditor" />
             <abp-input asp-for="JobInfo.Rank" label="@L["Rank"]" />

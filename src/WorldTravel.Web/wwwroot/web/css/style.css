@@ -7709,8 +7709,9 @@ body.home15-funiture-template {
 
     .kvkk {
         font-size: 13px !important;
-        left: 10px !important;
+        left: 0px !important;
         text-align: left;
+        margin-top: 15px;
     }
 
     .about-item {

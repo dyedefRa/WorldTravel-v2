@@ -94,7 +94,7 @@ namespace WorldTravel.Web.Pages.Job
                             RequiredQualification = Form.RequiredQualification,
                             CountryId = Form.CountryId,
                             CreatedDate = DateTime.Now,
-                            Description = Form.Description,
+                            Description = Form.Description != null || Form.Description != "" ? Form.Description : "yok",
                             EducationStatus = Form.EducationStatus,
                             Email = Form.Email,
                             FormIsOk = 0,

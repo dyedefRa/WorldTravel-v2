@@ -10,13 +10,13 @@
     <abp-modal size="Large">
         <abp-modal-header title="@L["NewCountryContent"].Value"></abp-modal-header>
         <abp-modal-body>
-            <abp-input asp-for="Id" />
+            <abp-input asp-for="Id" type="hidden" />
             <abp-select asp-for="CountryContentInfo.CountryId" label="@L["Country"]">
                 <option disabled selected>@L["Choose"]</option>
             </abp-select>
             <abp-input asp-for="CountryContentInfo.MainImage" label="@L["Image"]" accept="image/png, image/gif, image/jpeg" />
             <abp-input asp-for="CountryContentInfo.Title" label="@L["Title"]" />
-            <abp-input asp-for="CountryContentInfo.ShortDescription" label="@L["ShortDescription"] (@L["OnlySeenCountryList"])" />
+            <abp-input asp-for="CountryContentInfo.ShortDescription" label="@L["ShortDescription"] (@L["OnlySeenCountryList"])" class="ckeditor" />
             <abp-input asp-for="CountryContentInfo.Description" label="@L["Description"]" class="ckeditor" />
             <abp-input asp-for="CountryContentInfo.ExtraDescription" label="@L["ExtraDescription"]" class="ckeditor" />
             <abp-input asp-for="CountryContentInfo.Rank" label="@L["Rank"]" />

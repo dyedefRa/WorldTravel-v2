@@ -9,6 +9,7 @@
 
     //GENEL
     "ProjectName": "World Visa Turkey",
+    "QuickMenu": "Quick Menu",
     "Home": "Home Page",
     "Popular": "Popular",
     "Cities": "Cities",
@@ -16,8 +17,10 @@
     "LoginB": "LOGIN",
     "Login": "Login",
     "VisaRegister": "Visa Register",
-    "Profile": "PROFILE",
+    "Profile": "Profil",
+    "EditProfile": "Edit Profile",
     "Logout": "Logout",
+    "AllRightReserved": "All Right Reserved © 2023",
     "Loading": "Loading...",
     "Choose": "Choose",
     "Name": "Name",
@@ -42,7 +45,7 @@
     "IsContacted": "Is Contacted",
     "True": "True",
     "False": "False",
-    "Country": "Ülke",
+    "Country": "Country",
     "CreateForm": "Create Form",
     "ChangeContactedStatus": "Change Contacted Status",
     "Contact": "Contact",
@@ -94,7 +97,7 @@
     "Forms": "Forms",
 
     "ForgotYourPassword": "Forgot Your Password",
-    "WantToBeRegister": "Üye Olmak İstiyorum",
+    "WantToBeRegister": "I Want To Be Register",
     "LoginInstead": "Want To Be Register",
 
     //CountryContent
@@ -170,7 +173,8 @@
     "AboutDocTitle": "Documents",
     "AboutContractTitle": "Contract",
     "AboutProcessTitle": "Process",
-
+    "Features": "Features",
+    "Language": "Language",
 
     //HOME > CONTACT
     "ContactTitle": "CONTACT",
@@ -209,7 +213,8 @@
     "ProjectSlogan2": "More than a visa...",
     "ClickForInformation": "Click to get information",
     "DefaultImageTitle": "Image",
-
+    "References": "References",
+    "RefDesc": "We are always with you. Our worldwide reliable support network with our partners and expert consultants and companies.",
     "ServiceTitle": "SERVICES",
     "ServiceMarquee": "For more information, please call our number +9005520186969.",
     "ServiceHappy": "Happy Service",
@@ -276,8 +281,11 @@
     "descFormConsultantAndJob": "Find the best consultant for your business or apply to be one yourself. If you're looking to hire or post a job listing, fill out the form!",
     "AccommodationFee": "Accommodation Fee",
     "HourlyRate": "Hourly Rate",
+    "Hourly": "Hourly",
+    "Accomodation": "Accomodation",
     "LanguageName": "Language Name",
     "VisaApply": "Visa Apply Now",
+    "VisaApplication": "Visa Applications",
 
     "Sector": "Sector",
     "IsBecomeConsultDesc": "Is Become Consultant Description",
@@ -296,9 +304,43 @@
     "Location": "Location",
     "CustomerVisaApply": "Customer Visa Apply",
     "Documents": "Document",
-    "FormRegType": "Form Type"
-
-
-
+    "FormRegType": "Form Type",
+    "Acceptability": "Acceptability",
+    "UploadDocument": "Upload Documents",
+    "ChooseAndUpload": "Choose Your Document And Upload Server",
+    "ApplyDate": "Apply Date",
+    "ReviewNow": "Review Now",
+    "NotYetRated": "Not Yet Rated",
+    "MyOtherApplications": "My Other Applications",
+    "MemberSinceJoin": "'have been a member since",
+    "UploadedDocuments": "Uploaded Documents",
+    "DocumentName": "Document Name",
+    "UploadTime": "Upload Time",
+    "Setting": "Setting",
+    "Show": "Show",
+    "Approved": "Approved",
+    "USA": "USA",
+    "GERMANY": "Germany",
+    "CHINA": "China",
+    "SWEDEN": "Sweden",
+    "SWIRTZELAND": "Swirtzeland",
+    "NETHERLAND": "Netherland",
+    "CANADA": "Canada",
+    "NORWAY": "Norway",
+    "DENMARK": "Denmark",
+    "FRANCE": "France",
+    "CZECHREPUBLİC": "Czech Republic",
+    "SPAIN": "Spain",
+    "ITALY": "Italy",
+    "AUSTRIA": "Austria",
+    "AUSTRALIA": "Australia",
+    "UK": "United Kingdom",
+    "UAE": "United Arab Emirates",
+    "DUBAI": "Dubai",
+    "NEWZELAND": "New Zeland",
+    "IRELAND": "Ireland",
+    "BELGIUM": "Belgium",
+    "LUXEMBURG": "Luxemburg",
+    "FINLAND": "Finland"
   }
 }
