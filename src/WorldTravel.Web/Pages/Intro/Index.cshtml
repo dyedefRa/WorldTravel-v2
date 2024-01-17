@@ -5,7 +5,15 @@
 }
 
 <!DOCTYPE html>
+<style>
+    body {
+   -moz-transform: scale(0.8, 0.8);
+   zoom: 0.8;
+   zoom: 85%;
+}
+</style>
 <html lang="en">
+  
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -322,54 +330,54 @@
             </div>
             @*<div class="seperator"></div>*@
         </div>
-        <div class="row d-none d-lg-flex">
+        <div class="row d-none d-lg-flex" style="margin-top:100px;">
             <div class="col-sm-12 col-md-4 col-center">
                 <div class="container-all-count">
                     <div class="count-cont-cell1">
                         <div class="count-container">
-                            <h1 class="count" data-count="1430"></h1>
+                            <h1 class="count" data-count="250"></h1>
                             <div id="completionMessage"></div>
                         </div>
                         <div class="count-container">
-                            <h1 class="count" data-count="1200"></h1>
+                            <h1 class="count" data-count="500"></h1>
                             <div id="completionMessage2"></div>
                         </div>
                     </div>
                     <div class="count-cont-cell2">
                         <div class="count-container">
-                            <h1 class="count" data-count="800"></h1>
+                            <h1 class="count" data-count="300"></h1>
                             <div id="completionMessage3"></div>
                         </div>
                         <div class="count-container">
-                            <h1 class="count" data-count="800"></h1>
+                            <h1 class="count" data-count="120"></h1>
                             <div id="completionMessage4"></div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-sm-12 col-md-4">
-                <img loading="lazy" style="display: block; -webkit-user-select: none; position: relative; right: 70px;"
-                     src="/assets/images/earth.gif">
+                <img loading="lazy" style="display: block; -webkit-user-select: none; position: relative; right: 20px;"
+                     src="/assets/images/world-light.gif">
             </div>
             <abp class="col-sm-12 col-md-4 col-center">
                 <div class="container-all-count">
                     <div class="count-cont-cell3">
                         <div class="count-container">
-                            <h1 class="count" data-count="1430"></h1>
+                            <h1 class="count" data-count="700"></h1>
                             <div id="completionMessage5"></div>
                         </div>
                         <div class="count-container">
-                            <h1 class="count" data-count="1200"></h1>
+                            <h1 class="count" data-count="400"></h1>
                             <div id="completionMessage6"></div>
                         </div>
                     </div>
                     <div class="count-cont-cell4">
                         <div class="count-container">
-                            <h1 class="count" data-count="800"></h1>
+                            <h1 class="count" data-count="200"></h1>
                             <div id="completionMessage7"></div>
                         </div>
                         <div class="count-container">
-                            <h1 class="count" data-count="800"></h1>
+                            <h1 class="count" data-count="300"></h1>
                             <div id="completionMessage8"></div>
                         </div>
                     </div>
@@ -387,21 +395,21 @@
                 <div class="container-all-count">
                     <div class="count-cont-cell1" style="padding-right: 30px;">
                         <div class="count-container">
-                            <h1 class="count" data-count="1430"></h1>
+                            <h1 class="count" data-count="400"></h1>
                             <div id="completionMessage10"></div>
                         </div>
                         <div class="count-container">
-                            <h1 class="count" data-count="1200"></h1>
+                            <h1 class="count" data-count="300"></h1>
                             <div id="completionMessage11"></div>
                         </div>
                     </div>
                     <div class="count-cont-cell2" style="padding-right: 30px;">
                         <div class="count-container">
-                            <h1 class="count" data-count="800"></h1>
+                            <h1 class="count" data-count="200"></h1>
                             <div id="completionMessage12"></div>
                         </div>
                         <div class="count-container">
-                            <h1 class="count" data-count="800"></h1>
+                            <h1 class="count" data-count="300"></h1>
                             <div id="completionMessage14"></div>
                         </div>
                     </div>
@@ -411,21 +419,21 @@
                 <div class="container-all-count">
                     <div class="count-cont-cell3" style="padding-right: 30px;">
                         <div class="count-container">
-                            <h1 class="count" data-count="1430"></h1>
+                            <h1 class="count" data-count="400"></h1>
                             <div id="completionMessage15"></div>
                         </div>
                         <div class="count-container">
-                            <h1 class="count" data-count="1200"></h1>
+                            <h1 class="count" data-count="200"></h1>
                             <div id="completionMessage16"></div>
                         </div>
                     </div>
                     <div class="count-cont-cell4" style="padding-right: 30px;">
                         <div class="count-container">
-                            <h1 class="count" data-count="800"></h1>
+                            <h1 class="count" data-count="200"></h1>
                             <div id="completionMessage17"></div>
                         </div>
                         <div class="count-container">
-                            <h1 class="count" data-count="800"></h1>
+                            <h1 class="count" data-count="300"></h1>
                             <div id="completionMessage18"></div>
                         </div>
                     </div>
@@ -452,7 +460,7 @@
                         countNum: countTo,
                     },
                     {
-                        duration: 3000,
+                        duration:6000,
                         easing: 'linear',
                         step: function () {
                             $this.text(Math.floor(this.countNum));
@@ -481,7 +489,7 @@
                     $("#completionMessage8").html("Göçmen Danışmanı<br><span>Eklendi</span>").fadeIn(1000);
                     $("#completionMessage9").html("Yatırım Danışmanı<br><span>Eklendi</span>").fadeIn(1000);
 
-                     $("#completionMessage10").html("Emlak Danışmanı<br><span>Eklendi</span>").fadeIn(1000);
+                    $("#completionMessage10").html("Emlak Danışmanı<br><span>Eklendi</span>").fadeIn(1000);
                     $("#completionMessage11").html("İş Danışmanı<br><span>Eklendi</span>").fadeIn(1000);
                     $("#completionMessage12").html("Eğitim Danışmanı<br><span>Eklendi</span>").fadeIn(1000);
                     $("#completionMessage13").html("Sağlık Danışmanı<br><span>Eklendi</span>").fadeIn(1000);

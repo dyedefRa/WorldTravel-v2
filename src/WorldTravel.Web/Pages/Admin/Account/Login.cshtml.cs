@@ -60,8 +60,6 @@ namespace WorldTravel.Web.Pages.Admin.Account
 
         public virtual async Task<IActionResult> OnGetAsync()
         {
-            await SignInManager.SignOutAsync();
-
             LoginInput = new LoginInputModel();
             ExternalProviders = await GetExternalProviders();
             EnableLocalLogin = await SettingProvider.IsTrueAsync(AccountSettingNames.EnableLocalLogin);

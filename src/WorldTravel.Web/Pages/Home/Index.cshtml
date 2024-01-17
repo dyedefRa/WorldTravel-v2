@@ -85,38 +85,17 @@
     {
         @foreach (var item in Model.Slider)
         {
-            @if (item.Rank == 1)
-            {
-                <div class="slide-ext active">
-                    <img src="@item.PreviewImageUrl" loading="lazy" alt="@item.Title" title="@item.Title">
-                    <div class="info-ext">
-                        <div class="title-slider">
-                            <h2>@item.Title</h2>
-                            @*                            <h2>@L["SliderTitle11"]</h2>
-                *@
-                        </div>
-                        <span class="slider-seperator"></span>
-                        <p>@item.Description</p>
-                        <a href="@item.Url" class="btn-slider">@L["ApplyNow"] <i class="fa fa-chevron-right" style="margin-left:5px;"></i></a>
+            <div class="slide-ext active">
+                <img src="@item.PreviewImageUrl" loading="lazy" alt="@item.Title" title="@item.Title">
+                <div class="info-ext">
+                    <div class="title-slider">
+                        <h2>@item.Title</h2>
                     </div>
+                    <span class="slider-seperator"></span>
+                    <p>@item.Description</p>
+                    <a href="@item.Url" class="btn-slider">@L["ApplyNow"] <i class="fa fa-chevron-right" style="margin-left:5px;"></i></a>
                 </div>
-            }
-            else
-            {
-                <div class="slide-ext">
-                    <img src="/web/images/slider/rawImage.jpg" loading="lazy" alt="@item.Title" title="@item.Title">
-                    <div class="info-ext">
-                        <div class="title-slider">
-                            <h2>@item.Title</h2>
-                            @*                            <h2>@L["SliderTitle11"]</h2>
-                *@
-                        </div>
-                        <span class="slider-seperator"></span>
-                        <p>@item.Description</p>
-                        <a href="@item.Url" class="btn-slider">@L["ApplyNow"] <i class="fa fa-chevron-right" style="margin-left:5px;"></i></a>
-                    </div>
-                </div>
-            }
+            </div>
 
         }
     }
@@ -974,7 +953,12 @@
 @section scripts {
 
     <script>
-
+        $(document).ready(function () {
+            $(".tablinks").mouseenter(function(){
+                $(this).trigger("click");
+            });
+        });
+        
         $('.kvkkopenModal').click(function (e) {
             e.preventDefault();
             $('#kvkkmodal').modal('show');

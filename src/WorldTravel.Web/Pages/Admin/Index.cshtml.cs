@@ -27,15 +27,19 @@ namespace WorldTravel.Web.Pages.Admin
                 if (CurrentUser.IsAuthenticated)
                 {
                     var mustBeAdminUser = await _appUserRepository.FirstOrDefaultAsync(x => x.Id == CurrentUser.Id);
-                    if (mustBeAdminUser.UserType != null && mustBeAdminUser.UserType == UserType.User)
+                    if ((mustBeAdminUser.UserType != null && mustBeAdminUser.UserType == UserType.User))
                     {
-                        return Redirect("~/Admin/Account/Login");
+                        return Redirect("~/Home");
                     }
+                }
+                else
+                {
+                    return Redirect("~/Account/Login");
                 }
             }
             catch (Exception)
             {
-                return Redirect("~/Admin/Account/Login");
+                return Redirect("~/Home");
             }
 
             return Page();
