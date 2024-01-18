@@ -146,6 +146,8 @@
     "EntityNotFoundError": "İçerik bulunamadı.",
     "GeneralError": "Bir hata oluştu.", // Controller tarafındaki bilinmeyen hata
     "UnexpectedError": "Beklenmedik bir hata oluştu.", //Javascript tarafındaki bilinmeyen hata
+    "UserNotFound": "Kullanıcı bulunamadı.Lütfen tekrar deneyiniz.",
+    "CheckYourMail": "Bağlantı linki gönderildi. Lütfen emailinizi kontrol ediniz.",
 
     //SUCCESS & COnfirms
     "SuccessfullyCompleted": "İşleminiz başarıyla tamamlandı",
@@ -343,7 +345,15 @@
     "IRELAND": "İrlanda",
     "BELGIUM": "Belçika",
     "LUXEMBURG": "Lüksemburg",
-    "FINLAND": "Finlandiya"
+    "FINLAND": "Finlandiya",
 
+
+    "Send": "Gönder",
+    "PasswordChangeLinkWillSent": "E-posta adresinize bir şifre sıfırlama bağlantısı gönderilecektir. Birkaç dakika içerisinde bir e-posta almazsanız lütfen tekrar deneyin.",
+    "Update": "Güncelle",
+    "EnterYourNewPassword": "Yeni Şifrenizi Giriniz",
+    "LinkHasTimedOut": "Link zaman aşımına uğramış.Lütfen tekrardan şifre yenileme isteği gönderin.",
+    "YourPasswordHasBeenChangedSuccessfully.": "Şifreniz başarıyla değiştirildi.",
+    "AnErrorOccurredWhileChangingYourPassword": "Şifreniz değiştirilirken hata oluştu.Lütfen daha sonra tekrar deneyiniz.",
   }
 }

@@ -4,31 +4,10 @@
 @model WorldTravel.Web.Pages.Account.LoginModel
 @inject IStringLocalizer<WorldTravelResource> L
 @{
-    Layout = "~/Pages/Shared/_Layout.cshtml";
+    Layout = "~/Pages/Shared/_Layout2.cshtml";
 }
 
-<style>
-    .home9-parallax .footer-top h4, .home9-parallax .footer-top .h4, .home9-parallax .footer-top, .home9-parallax .footer-links a, .home9-parallax .footer-top p, .home9-parallax .footer-bottom, .home9-parallax .footer-bottom a {
-        color: #fff;
-    }
-</style>
-
-@*<div class="page section-header">
-=======
-<div class="page section-header">
->>>>>>> Third Commit
-    <div class="bredcrumbWrap mb-00">
-        <div class="container breadcrumbs">
-            <a class="bread breadfirst" href="/Home" title="@L["Home"]"><i class="fa fa-home fa-fw"></i> @L["Home"]</a><span style="font-size: 14px;" aria-hidden="true">›</span>
-            <a class="bread breadsecond" href="#" onClick="return false;" title="@L["Login"]"><i class="fa fa-sign-in fa-fw"></i> @L["Login"]</a>
-        </div>
-    </div>
-       <div class="page-title text-center">
-    <div class="wrapper"><h1 class="page-width"><i class="fa fa-sign-in fa-fw"></i> @L["LoginB"]</h1></div>
-    </div>
-</div>*@
-
-<div class="container" style="margin-bottom:170px;">
+<div class="container">
     <div class="row">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 main-col">
             <div class="mb-4">
@@ -48,7 +27,7 @@
                             <abp-button text="@L["LoginB"]" style="background: #ff7800; padding: 15px 20px;
                                         border-radius: 5px; font-weight: 700; box-shadow: 0px 1px 20px 0 #1594d069;" type="submit" button-type="Success" class="btn mb-3" />
                             <p class="mb-4">
-                                <a href="#">@L["ForgotYourPassword"]</a> &nbsp; | &nbsp;
+                                <a href="/Account/ForgotPassword">@L["ForgotYourPassword"]</a> &nbsp; | &nbsp;
                                 <a href="/Account/Register">@L["WantToBeRegister"]</a>
                             </p>
                         </div>
@@ -62,12 +41,6 @@
 @section scripts {
     <script>
         $(document).ready(function () {
-            $('body').addClass('home9-parallax');
-            $('.header-wrap').removeClass('classicHeader');
-            $('.customer-links').css("visibility", "hidden");
-            $('.header-wrap').css("visibility", "hidden");
-
-
-        });
+                });
     </script>
 }

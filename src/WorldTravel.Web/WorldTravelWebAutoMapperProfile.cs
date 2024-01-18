@@ -8,7 +8,6 @@ using WorldTravel.Dtos.Forms.ViewModels;
 using WorldTravel.Dtos.Jobs;
 using WorldTravel.Dtos.Receipts;
 using WorldTravel.Dtos.Sliders;
-using WorldTravel.Dtos.Sliders.ViewModels;
 using WorldTravel.Dtos.Users.ViewModels;
 using WorldTravel.Dtos.VisaTypes;
 using WorldTravel.Entities.Countries;
@@ -17,7 +16,6 @@ using static WorldTravel.Web.Pages.Account.ManageModel;
 using static WorldTravel.Web.Pages.Account.RegisterModel;
 using static WorldTravel.Web.Pages.Admin.Blog.CreateModel;
 using static WorldTravel.Web.Pages.Admin.Blog.EditModel;
-using static WorldTravel.Web.Pages.Admin.CountryContent.CreateModel;
 using static WorldTravel.Web.Pages.Admin.CountryContent.EditModel;
 using static WorldTravel.Web.Pages.Admin.Job.CreateModel;
 using static WorldTravel.Web.Pages.Admin.Job.EditModel;
@@ -25,8 +23,6 @@ using static WorldTravel.Web.Pages.Admin.Slider.CreateModel;
 using static WorldTravel.Web.Pages.Admin.Slider.EditModel;
 using static WorldTravel.Web.Pages.Admin.VisaType.CreateModel;
 using static WorldTravel.Web.Pages.Admin.VisaType.EditModel;
-using static WorldTravel.Web.Pages.Country.DetailModel;
-using static WorldTravel.Web.Pages.Admin.CountryContent.CreateModel;
 
 namespace WorldTravel.Web
 {

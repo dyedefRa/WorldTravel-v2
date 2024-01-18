@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.CookiePolicy;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -31,6 +32,8 @@ using WorldTravel.EntityFrameworkCore;
 using WorldTravel.HangfireServices.Abstract;
 using WorldTravel.HangfireServices.Concrete;
 using WorldTravel.Localization;
+using WorldTravel.Models.Settings;
+using WorldTravel.Settings;
 using WorldTravel.Web.Helpers;
 
 namespace WorldTravel.Web
@@ -83,6 +86,7 @@ namespace WorldTravel.Web
                 options.ExpireTimeSpan = TimeSpan.FromDays(365 * 1000);
             });
 
+            ConfigureIdentityOptions();
             ConfigureAppSetting(context, configuration);
             ConfigureUrls(configuration);
             ConfigureBundles();
@@ -94,6 +98,19 @@ namespace WorldTravel.Web
             ConfigureHangfire(context, configuration);
             ConfigureRedirectStrategy(context, configuration);
             context.Services.AddLogging();
+        }
+
+        private void ConfigureIdentityOptions()
+        {
+            Configure<IdentityOptions>(options =>
+            {
+                options.Password.RequiredLength = WorldTravelSettings.IdentityOptions.RequiredLength;
+                options.Password.RequireNonAlphanumeric = WorldTravelSettings.IdentityOptions.RequireNonAlphanumeric;
+                options.Password.RequireLowercase = WorldTravelSettings.IdentityOptions.RequireLowercase;
+                options.Password.RequireUppercase = WorldTravelSettings.IdentityOptions.RequireUppercase;
+                options.Password.RequireDigit = WorldTravelSettings.IdentityOptions.RequireDigit;
+                options.Password.RequiredUniqueChars = WorldTravelSettings.IdentityOptions.RequiredUniqueChars;
+            });
         }
 
         private void ConfigureRedirectStrategy(ServiceConfigurationContext context, IConfiguration configuration)
@@ -118,12 +135,8 @@ namespace WorldTravel.Web
         private void ConfigureAppSetting(ServiceConfigurationContext context, IConfiguration configuration)
         {
             //context.Services.Configure<ConstraintSettings>(configuration.GetSection("ConstraintSettings"));
-            //context.Services.Configure<DefaultSettings>(configuration.GetSection("DefaultSettings"));
-            //context.Services.Configure<FtpSettings>(configuration.GetSection("FtpSettings"));
-            //context.Services.Configure<SftpSettings>(configuration.GetSection("SftpSettings"));
-            //context.Services.Configure<SmtpSettings>(configuration.GetSection("SmtpSettings"));
-            //context.Services.Configure<SftpMatchSettings>(configuration.GetSection("SftpMatchSettings"));
-            //context.Services.Configure<ItsServiceSettings>(configuration.GetSection("ItsServiceSettings"));
+            context.Services.Configure<DefaultSettings>(configuration.GetSection("DefaultSettings"));
+            context.Services.Configure<SmtpSettings>(configuration.GetSection("SmtpSettings"));
             //configuration.GetSection("ConstraintSettings").Bind(XmlToDtoHelper.ConstraintSettings);
         }
 
@@ -208,23 +221,8 @@ namespace WorldTravel.Web
         {
             Configure<AbpLocalizationOptions>(options =>
             {
-                //options.Languages.Add(new LanguageInfo("ar", "ar", "العربية"));
-                //options.Languages.Add(new LanguageInfo("cs", "cs", "Čeština"));
                 options.Languages.Add(new LanguageInfo("en", "en", "English"));
-                //options.Languages.Add(new LanguageInfo("en-GB", "en-GB", "English (UK)"));
-                //options.Languages.Add(new LanguageInfo("hu", "hu", "Magyar"));
-                //options.Languages.Add(new LanguageInfo("fi", "fi", "Finnish"));
-                //options.Languages.Add(new LanguageInfo("fr", "fr", "Français"));
-                //options.Languages.Add(new LanguageInfo("hi", "hi", "Hindi", "in"));
-                //options.Languages.Add(new LanguageInfo("it", "it", "Italian", "it"));
-                //options.Languages.Add(new LanguageInfo("pt-BR", "pt-BR", "Português"));
-                //options.Languages.Add(new LanguageInfo("ru", "ru", "Русский"));
-                //options.Languages.Add(new LanguageInfo("sk", "sk", "Slovak"));
                 options.Languages.Add(new LanguageInfo("tr", "tr", "Türkçe"));
-                //options.Languages.Add(new LanguageInfo("zh-Hans", "zh-Hans", "简体中文"));
-                //options.Languages.Add(new LanguageInfo("zh-Hant", "zh-Hant", "繁體中文"));
-                //options.Languages.Add(new LanguageInfo("de-DE", "de-DE", "Deutsch", "de"));
-                //options.Languages.Add(new LanguageInfo("es", "es", "Español"));
             });
         }
 
@@ -320,16 +318,16 @@ namespace WorldTravel.Web
             //});
             app.UseAbpSerilogEnrichers();
             app.UseConfiguredEndpoints();
-            app.UseHangfireDashboard("/hangfire", new DashboardOptions()
-            {
-                Authorization = new[] { new HangfireAuthorizationFilter() }
-            });
-            app.UseHangfireServer(new BackgroundJobServerOptions
-            {
-                SchedulePollingInterval = TimeSpan.FromSeconds(30), // Default 15sn.
-                WorkerCount = 1,
+            //app.UseHangfireDashboard("/hangfire", new DashboardOptions()
+            //{
+            //    Authorization = new[] { new HangfireAuthorizationFilter() }
+            //});
+            //app.UseHangfireServer(new BackgroundJobServerOptions
+            //{
+            //    SchedulePollingInterval = TimeSpan.FromSeconds(30), // Default 15sn.
+            //    WorkerCount = 1,
 
-            });
+            //});
         }
     }
 }

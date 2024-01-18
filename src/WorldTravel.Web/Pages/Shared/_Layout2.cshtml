@@ -36,17 +36,16 @@
     <!-- Bootstap CSS -->
     <link rel="stylesheet" href="/web/css/bootstrap.min.css">
     <link href="~/libs/toastr/toastr.min.css" rel="stylesheet" />
-
     <link rel="stylesheet" href="/web/css/style.css">
     <link rel="stylesheet" href="/web/css/responsive.css">
     @*<link href="~/extensions/chatbot/chatbot.css" rel="stylesheet" />*@
-    <link rel="stylesheet" href="/web/ext/golden/golden.css">
+    <link href="~/extensions/golden/golden.css" rel="stylesheet" />
     <link href="/web/css/custom.css" rel="stylesheet" />
     @await Component.InvokeAsync(typeof(WidgetStylesViewComponent))
     @await RenderSectionAsync("styles", false)
     @await Component.InvokeLayoutHookAsync(LayoutHooks.Head.Last, StandardLayouts.Empty)
 </head>
-<body class="template-index belle" style="background-color:lightcyan">
+<body class="template-index belle" id="body-bg" style="background-color:#fff;">
     @* <div id="pre-loader">
     <img src="/web/images/loader.gif" alt="Loading..." />
     </div>*@
@@ -67,39 +66,84 @@
 
         <div class="top-header">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-10 col-sm-8 col-md-5 col-lg-4">
+                <div class="row" style="display: flex; align-items: center;">
+                    <div class="col-11 col-sm-8 col-md-5 col-lg-4" style="display:flex; justify-content:flex-start; align-items: center;">
+                        @*   <div class="currency-picker">
+                        <span class="selected-currency">USD</span>
+                        <ul id="currencies">
+                        <li data-currency="INR" class="">INR</li>
+                        <li data-currency="GBP" class="">GBP</li>
+                        <li data-currency="CAD" class="">CAD</li>
+                        <li data-currency="USD" class="selected">USD</li>
+                        <li data-currency="AUD" class="">AUD</li>
+                        <li data-currency="EUR" class="">EUR</li>
+                        <li data-currency="JPY" class="">JPY</li>
+                        </ul>
+                        </div>*@
                         <div class="language-dropdown">
-                            <span class="language-dd">
-                                <img width="23" class="selectedLanguageImage" src="/global_assets/images/lang/tr.png" />
-                                <span class="selectedLanguageName fs15">@L["Turkish"]</span>
+                            <span class="language-dd" style="display: flex; flex-direction: row; background: #ffffff; align-items: center; justify-content: space-evenly; padding: 8px;">
+                                <img loading="lazy" width="23" class="selectedLanguageImage" src="/global_assets/images/lang/tr.png" />
+                                @*                                    <span class="selectedLanguageName fs15" style="margin-left:5px;">@L["Turkish"]</span>
+                                *@
                             </span>
-                            <ul id="language" style="width:120px;">
+                            <ul id="language" style="border-radius: 0; width: 65px;">
                                 <li class="select-language">
-                                    <a style="color:black;text-decoration:none;" href="#">
-                                        <img width="23" class="optionLanguageImage fs15" src="/global_assets/images/lang/en.png" />
-                                        <span class="optionLanguageName">@L["English"]</span>
+                                    <a style="color:black;text-decoration:none; color: black; text-decoration: none; display: flex; justify-content: space-between;" href="#">
+                                        <img loading="lazy" width="23" class="optionLanguageImage" src="/global_assets/images/lang/en.png" />
+                                        @*                                            <span class="optionLanguageName fs15">@L["English"]</span>
+                                        *@
                                     </a>
                                 </li>
                             </ul>
                         </div>
-                        <p class="phone-no"><a href="tel:905343970662" class="fs15" title="@L["ClickCallMe"]" style="cursor:pointer;"><i class="anm anm-phone-s"></i> +90 (534) 397 0662 </a></p>
-                        <p style="margin-left:5px;" class="phone-no"><a href="mailto:contact@worldvisaturkey.com" class="fs15" title="@L["ClickSendMail"]" style="cursor:pointer;text-transform:initial;"><i class="icon-email"></i> @L["SendMail"] </a></p>
+                        <div class="d-lg-none d-md-none d-sm-block">
+                            <form method="post" action="/aramayap" style="display: flex;">
+                                <input type="text" class="form-control search__form" placeholder="Arama Yapın..."
+                                       style="margin-left: 10px; height: 34px; border-radius:0;">
+                                <span class="fa fa-search search-icon-style"></span>
+                            </form>
+                        </div>
+                        <p class="phone-no d-none d-lg-block" style="border-right: 1px solid #fff; padding-right: 15px; margin:0 15px;">
+                            <a href="tel:905343970662" class="fs15" title="@L["ClickCallMe"]" style="cursor:pointer; display: flex; align-items: center;">
+                                <i class="anm anm-phone-s"></i> <span style="margin-left: 5px; font-weight: 600;">+90 (534) 397 0662 </span>
+                            </a>
+                        </p>
+                        <p style="margin-left:5px;" class="phone-no d-none d-lg-block" @*style="border-right: 1px solid #fff; padding-right: 45px; margin-right: 15px;"*@>
+                            <a href="mailto:contact@worldvisaturkey.com" class="fs15" title="@L["ClickSendMail"]"
+                               style="cursor:pointer;text-transform:initial; display: flex; align-items: center;">
+                                <i class="icon-email"></i> <span style="margin-left: 5px; font-weight: 600; text-transform: uppercase;">@L["SendMail"]</span>
+                            </a>
+                        </p>
+
                     </div>
-                    <div class="col-sm-4 col-md-4 col-lg-4 d-none d-lg-none d-md-block d-lg-block" style="margin-top:3px;">
-                        <div class="text-center"><p class="top-header_middle-text"><a href="/Home" class="fs15">@L["ProjectName"]</a></p></div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 d-none d-lg-flex" style="justify-content: center;">
+                        @*                        <div class="text-center"><p class="top-header_middle-text"><a href="/Home" class="fs15">@L["ProjectName"]</a></p></div>
+                        *@
+                        <a href="/Home" class="fs15"> <img src="/web/images/world-logo.png" height="55" alt="@L["ImageFailedToLoad"]" title="Anasayfa" /></a>
                     </div>
-                    <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
+                    <div class="col-1 col-sm-4 col-md-3 col-lg-4 text-right">
+                        <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
                         <ul class="customer-links list-inline">
                             @if (CurrentUser.IsAuthenticated)
                             {
-                                <li><a class="fs15" href="/Account/Manage">@L["MyAccountInformation"]</a></li>
-                                <li><a class="fs15" href="/Account/Logout">@L["Logout"]</a></li>
+                                <li style="border-right: 1px solid #fff; padding: 0px 15px 0px 0px; margin-right: 5px;">
+                                    <a class="fs15" href="/Account/Manage" style="display: flex; align-items: center; text-decoration:none;">
+                                        <i class="fa fa-user" style="margin-right:5px; font-size:18px;"></i> <span style="margin-top:3px; font-weight: 600;">@L["MyAccountInformation"] </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="fs15" href="/Account/Logout" style="display: flex; align-items: center; text-decoration:none;">
+                                        <i class="fa fa-close" style="margin-right:5px; font-size:18px;"></i> <span style="margin-top:3px; font-weight: 600;">@L["Logout"]</span>
+                                    </a>
+                                </li>
                             }
                             else
                             {
-                                <li><a class="fs15" href="/Account/Login">@L["LoginB"]</a></li>
-                                <li><a class="fs15" href="/Account/Register">@L["Register"]</a></li>
+                                <li style="padding: 0px 15px 0px 0px; margin-right: 5px;">
+                                    <a class="fs15" href="/Account/Login" style="display: flex; align-items: center; text-decoration:none;">
+                                        <i class="fa fa-user" style="margin-right:5px; font-size:18px;"></i> <span style="margin-top:3px; font-weight: 600;">@L["LoginB"]</span>
+                                    </a>
+                                </li>
                             }
                         </ul>
                     </div>
@@ -110,13 +154,12 @@
 
         <partial name="_Menu2" />
 
-        <div id="page-content">
+        <div id="page-content" style="margin-top:100px;margin-bottom:100px">
             @RenderBody()
         </div>
         <partial name="_WhatsApp" />
 
         @*  <partial name="_ChatBot" />*@
-
         <partial name="_Footer" />
 
         <!--Scoll Top-->
@@ -146,18 +189,17 @@
         <script src="~/global_assets/js/plugins/forms/inputs/formatter.min.js"></script>
         <script src="~/libs/toastr/toastr.min.js"></script>
         <script src="~/web/js/main.js"></script>
-
-        @*        <script src="~/web/ext/chatbot/chatbot.js"></script>
-        *@        <script src="~/web/ext/golden/golden.js"></script>
+        @*<script src="~/extensions/chatbot/chatbot.js"></script>*@
+        <script src="~/extensions/golden/golden.js"></script>
         <script src="~/web/js/custom.js"></script>
         <!--For Newsletter Popup-->
         <!-- Photoswipe Gallery -->
         <script src="~/web/js/vendor/photoswipe.min.js"></script>
         <script src="~/web/js/vendor/photoswipe-ui-default.min.js"></script>
 
-        <script>
+        <script src="https://www.google.com/recaptcha/api.js"></script>
 
-           
+        <script>
 
             jQuery(document).ready(function () {
 
@@ -218,11 +260,20 @@
                     jQuery('#modalOverly').hide();
                 }
             });
+
+            function openCity(cityName) {
+                var i;
+                var x = document.getElementsByClassName("city");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                document.getElementById(cityName).style.display = "block";
+            }
+
         </script>
         <!--End For Newsletter Popup-->
         <abp-script-bundle name="custom_js_files" />
         <script src="~/assets/js/custom.js?_v=@DateTime.Now.Millisecond"></script>
-
 
         @await RenderSectionAsync("scripts", false)
         @await Component.InvokeAsync(typeof(WidgetScriptsViewComponent))

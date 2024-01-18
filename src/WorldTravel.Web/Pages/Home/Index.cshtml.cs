@@ -224,7 +224,7 @@ namespace WorldTravel.Web.Pages.Home
             [Required]
             [SelectItems(nameof(Gender))]
             public GenderType Gender { get; set; }
-            public Nullable<DateTime> BirthDate { get; set; }
+            public DateTime? BirthDate { get; set; }
             [Required]
             [SelectItems(nameof(Countries))]
             [DisplayName("Country")]

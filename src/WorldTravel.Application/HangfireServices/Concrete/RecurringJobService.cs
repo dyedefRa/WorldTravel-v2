@@ -20,7 +20,7 @@ namespace WorldTravel.HangfireServices.Concrete
 
         public async Task<bool> SendProductionMailsJob()
         {
-            RecurringJob.AddOrUpdate("NumuneUretimBildirimMailJob", () => SendProductionMailsInit(), "*/" + _defaultSettings.AutoResendExpressionMinute + " * * * *", System.TimeZoneInfo.Local);
+            //RecurringJob.AddOrUpdate("NumuneUretimBildirimMailJob", () => SendProductionMailsInit(), "*/" + _defaultSettings.AutoResendExpressionMinute + " * * * *", System.TimeZoneInfo.Local);
             return await Task.FromResult(true);
         }
 
@@ -32,7 +32,6 @@ namespace WorldTravel.HangfireServices.Concrete
             {
 
             }
-            //await _productAppService.AutoSenderServiceAndMailAsync();
         }
 
         #endregion

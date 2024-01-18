@@ -10,7 +10,9 @@ using WorldTravel.Dtos.Forms;
 using WorldTravel.Dtos.Forms.ViewModels;
 using WorldTravel.Dtos.Jobs;
 using WorldTravel.Dtos.Jobs.ViewModels;
+using WorldTravel.Dtos.MailTemplates;
 using WorldTravel.Dtos.Receipts;
+using WorldTravel.Dtos.SentMails;
 using WorldTravel.Dtos.Sliders;
 using WorldTravel.Dtos.Sliders.ViewModels;
 using WorldTravel.Dtos.Users;
@@ -22,7 +24,9 @@ using WorldTravel.Entities.CountryContents;
 using WorldTravel.Entities.Files;
 using WorldTravel.Entities.Forms;
 using WorldTravel.Entities.Jobs;
+using WorldTravel.Entities.MailTemplates;
 using WorldTravel.Entities.Receipts;
+using WorldTravel.Entities.SentMails;
 using WorldTravel.Entities.Sliders;
 using WorldTravel.Entities.Users;
 using WorldTravel.Entities.VisaTypes;
@@ -34,6 +38,9 @@ namespace WorldTravel
     {
         public WorldTravelApplicationAutoMapperProfile()
         {
+            CreateMap<MailTemplate, MailTemplateDto>();
+            CreateMap<SentMailDto, SentMail>();
+
             #region User
             CreateMap<AppUser, AppUserViewModel>();              //UserAppService > GetUserByIdAsync
             CreateMap<IdentityUserDto, IdentityUserUpdateDto>(); //UserAppService > ManageProfileAsync

@@ -146,7 +146,6 @@ namespace WorldTravel.Web.Pages.Account
             [SelectItems(nameof(Gender))]
             public GenderType Gender { get; set; }
             public int ProfileIsOk { get; set; }
-            //[Required]
             public DateTime? BirthDate { get; set; }
         }
     }

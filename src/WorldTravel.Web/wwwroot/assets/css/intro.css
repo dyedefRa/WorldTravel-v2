@@ -50,6 +50,7 @@
         flex-wrap: nowrap;
         margin: 0 0 15px 0 !important;
         border-bottom: 1px solid #fff;
+        padding:10px;
     }
 /*
     .count-container:last-child{

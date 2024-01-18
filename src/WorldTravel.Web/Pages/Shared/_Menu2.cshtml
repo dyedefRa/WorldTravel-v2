@@ -15,64 +15,35 @@
 <!--Web Menu-->
 <div class="header-wrap classicHeader animated d-flex">
     <div class="container-fluid">
-        <div class="row align-items-center">
+        <div class="row align-items-center d-none d-lg-flex">
             <!--Web Logo-->
-            <div class="logo col-md-4 col-lg-4 d-none d-lg-block">
+            <div class="logo col-md-4 col-lg-3 d-none d-lg-block">
                 <a href="/Home" style="text-decoration:none;">
-                    <div style="display:flex;">
-                        <img src="/web/images/world-logo.png" height="30" alt="@L["ImageFailedToLoad"]" title="Anasayfa" />
-                        <span class="logo-next-name" style="font-size:18px;">@L["ProjectName"]</span>
+                    <div style="display:flex; align-items:center;">
+                        <img loading="lazy" src="/web/images/world-logo-long.png" height="55" alt="@L["ImageFailedToLoad"]" title="Anasayfa" />
                     </div>
                 </a>
             </div>
             <!--End Web Logo-->
-            <div class="col-2 col-sm-3 col-md-3 col-lg-8">
-                <div class="d-block d-lg-none">
+        </div>
+        <div class="row d-flex d-lg-none" style="margin-top:10px; align-items:center;">
+            <div class="col-10">
+                <a href="/Home" style="text-decoration:none;">
+                    <div style="display:flex; align-items:center;">
+                        <img loading="lazy" src="/web/images/world-logo-long.png"
+                             height="55" alt="@L["ImageFailedToLoad"]" class="img-logo-mobile" title="Anasayfa" />
+                    </div>
+                </a>
+            </div>
+            <div class="col-2">
+                <div style="display: flex; justify-content: flex-end;">
                     <button type="button" class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open">
                         <i class="icon anm anm-times-l"></i>
-                        <i class="anm anm-bars-r"></i>
+                        <i class="anm anm-bars-r" style="color: #000;"></i>
                     </button>
                 </div>
-                <nav class="grid__item" id="AccessibleNav">
-                    <ul id="siteNav" class="site-nav medium right hidearrow">
-                        @if (countryContents.Count > 0)
-                        {
-                            <li class="lvl1"><a href="/Country">@L["Countries"]</a></li>
-                        }
-                        @if (visaTypes.Count > 0)
-                        {
-                            <li class="lvl1"><a href="/VisaType">@L["VisaTypesB"]</a></li>
-                        }
-                        @if (jobs.Count > 0)
-                        {
-                            <li class="lvl1"><a href="/Job">@L["JobsB"]</a></li>
-                        }
-                        <li class="lvl1"><a href="/Home"><i class="fa fa-home fa-fw"></i> @L["Home"]</a></li>
-                    </ul>
-                </nav>
-                <!--End Web Menu-->
             </div>
         </div>
     </div>
 </div>
 <!--End Menu-->
-<!--Mobile Menu-->
-<div class="mobile-nav-wrapper" role="navigation">
-    <div class="closemobileMenu"><i class="icon anm anm-times-l pull-right"></i> Close Menu</div>
-    <ul id="MobileNav" class="mobile-nav">
-        @if (countryContents.Count > 0)
-        {
-            <li class="lvl1"><a href="/Country">@L["Countries"]</a></li>
-        }
-        @if (visaTypes.Count > 0)
-        {
-            <li class="lvl1"><a href="/VisaType">@L["VisaTypesB"]</a></li>
-        }
-        @if (jobs.Count > 0)
-        {
-            <li class="lvl1"><a href="/Job">@L["JobsB"]</a></li>
-        }
-        <li class="lvl1"><a href="/Home"><i class="fa fa-home fa-fw"></i>@L["Home"]</a></li>
-    </ul>
-</div>
-<!--End Mobile Menu-->

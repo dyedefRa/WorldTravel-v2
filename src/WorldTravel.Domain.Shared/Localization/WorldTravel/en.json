@@ -144,6 +144,8 @@
     "EntityNotFoundError": "Content not found.",
     "GeneralError": "Something went wrong.", // Controller tarafındaki bilinmeyen hata
     "UnexpectedError": "An unexpected error has occurred", //Javascript tarafındaki bilinmeyen hata
+    "UserNotFound": "User not found. Please try again.",
+    "CheckYourMail": "Please check your email",
 
     //SUCCESS & COnfirms
     "SuccessfullyCompleted": "Your transaction has been successfully completed",
@@ -341,6 +343,15 @@
     "IRELAND": "Ireland",
     "BELGIUM": "Belgium",
     "LUXEMBURG": "Luxemburg",
-    "FINLAND": "Finland"
+    "FINLAND": "Finland",
+
+    "Send": "Send",
+    "PasswordChangeLinkWillSent": "A password change link will be sent to your email address. If you do not receive an email within a few minutes, please try again.",
+    "Update": "Update",
+    "EnterYourNewPassword": "Enter Your New Password",
+    "LinkHasTimedOut": "The link has timed out. Please send a password reset request again.",
+    "YourPasswordHasBeenChangedSuccessfully.": "Your password has been changed successfully.",
+    "AnErrorOccurredWhileChangingYourPassword": "An error occurred while changing your password. Please try again later."
+
   }
 }
